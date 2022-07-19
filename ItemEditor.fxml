@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10.0" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ItemEditorController">
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="180.0" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+   <columnConstraints>
+      <ColumnConstraints minWidth="10.0" prefWidth="80.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="80.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="80.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="80.0" />
+      <ColumnConstraints minWidth="10.0" prefWidth="80.0" />
+   </columnConstraints>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+   <children>
+      <Label text="Item #:" />
+      <Label text="Category:" GridPane.rowIndex="1" />
+      <Label text="Item Type:" GridPane.rowIndex="2" />
+      <Label text="Item Name:" GridPane.rowIndex="3" />
+      <Label text="Unit Price" GridPane.rowIndex="4" />
+      <TextField fx:id="ItemNumber" GridPane.columnIndex="1" />
+      <TextField fx:id="itemName" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="3" />
+      <TextField fx:id="unitPrice" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <TextField fx:id="picture" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="5" />
+      <Button fx:id="btn_newCategory" mnemonicParsing="false" onAction="#handle_newCategory" prefWidth="100.0" text="New Category" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <Button fx:id="btn_newItemType" mnemonicParsing="false" onAction="#handle_newItemType" prefWidth="100.0" text="New Item Type" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+      <Button mnemonicParsing="false" onAction="#handle_picture" text="Picture" GridPane.rowIndex="5" />
+      <Button fx:id="btn_create" mnemonicParsing="false" onAction="#handle_create" prefWidth="60.0" text="Create" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <Button fx:id="btn_close" mnemonicParsing="false" onAction="#handle_close" prefWidth="60.0" text="Close" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+      <ImageView fx:id="imageView" fitHeight="162.0" fitWidth="301.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <ComboBox fx:id="cbox_category" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <ComboBox fx:id="cbox_type" prefWidth="150.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+   </children>
+</GridPane>
